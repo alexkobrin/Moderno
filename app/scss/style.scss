@@ -125,13 +125,13 @@
         button {
             position: absolute;
             content: '';
-           
+
             right: 25px;
             border: none;
             background-color: transparent;
             color: green;
             top: 18px;
-            
+
 
         }
 
@@ -142,10 +142,10 @@
 // end search
 // start products
 
-.products{
-    padding: 110px 0 ;
+.products {
+    padding: 110px 0;
     background-color: $grey;
-    
+
 }
 
 .products__inner-btn {
@@ -158,49 +158,55 @@
         background-color: #fff;
         color: $dark;
         cursor: pointer;
-        & + button {
+
+        &+button {
             margin-left: 2px;
         }
+
         &.mixitup-control-active {
             background-color: $red;
             color: #fff;
         }
     }
 }
+
 .products__inner-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .product__item {
     max-width: 442px;
     width: 100%;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
 
-&-img {
-      min-height: 250px;
-      background-repeat: no-repeat;
-      display: block;
-      background-position: center ;
-      background-size: cover;
-}
-&-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
-    min-height: 90px ;
-    align-items: center;
-    border-bottom: 1px solid #e7ecf2;
-    
-    &-name {     
-        max-width: 310px;
-        font-weight: 500;
+    &-img {
+        min-height: 250px;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center;
+        background-size: cover;
     }
-}
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        min-height: 90px;
+        align-items: center;
+        border-bottom: 1px solid #e7ecf2;
+
+        &-name {
+            max-width: 310px;
+            font-weight: 500;
+        }
+    }
+
     &-title {
         font-size: 18px;
-        color: $dark;    
+        color: $dark;
     }
 
     &-category {
@@ -209,6 +215,7 @@
         font-size: 14px;
 
     }
+
     &-price {
         color: $dark;
         font-size: 20px;
@@ -223,52 +230,58 @@
         padding: 10px 30px;
         align-items: center;
     }
+
     &-author {
         display: flex;
         align-items: center;
         max-width: 220px;
 
-        .avatar{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: inline-block;
-    margin-right: 14px;
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+            margin-right: 14px;
 
         }
-         span: {
-        font-size: 14px;
-        font-weight: 500;
+
+        span: {
+            font-size: 14px;
+            font-weight: 500;
         }
-        
+
     }
-    &-star{
+
+    &-star {
         font-size: 12px;
-        span{
+
+        span {
             color: $color-text;
         }
     }
 
 }
 
-.products__bottom-btn{
-    
+.products__bottom-btn {
+
     text-align: center;
-    button{
-    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
-     margin: 45px 5px 0;   
-     border: none;
-     background-color: #fff;
-     color: $dark;
-     padding: 20px 30px ;
-     cursor: pointer;
-     &.mixitup-control-active {
-        background-color: $red;
-        color: #fff;
-    }
+
+    button {
+        box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+        margin: 45px 5px 0;
+        border: none;
+        background-color: #fff;
+        color: $dark;
+        padding: 20px 30px;
+        cursor: pointer;
+
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+        }
     }
 
 }
@@ -277,82 +290,90 @@
 // start product slider
 
 
-.product-slider{
-    padding: 110px 0 120px ;
+.product-slider {
+    padding: 110px 0 120px;
 }
 
-.rate-star{
+.rate-star {
     display: inline-block;
     margin-right: 13px;
 }
 
 .product-slider {
-  
-    .slick-dots{
+
+    .slick-dots {
         text-align: center;
         margin-top: 50px;
-         
-        li{
+
+        li {
             display: inline-block;
-            margin-left: 3px ;
+            margin-left: 3px;
             margin-right: 3px;
-            &.slick-active{
+
+            &.slick-active {
                 button {
-                 background-color: $green;    
+                    background-color: $green;
                 }
-                
+
             }
-            button{
+
+            button {
                 border-radius: 50%;
                 background-color: rgb(232, 232, 232);
-                 border: none;
-                 font-size: 0;
-                 width: 16px;
-                 height: 16px;
-                 cursor: pointer;
-                 outline: none;
-                
+                border: none;
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                outline: none;
+
             }
-            
+
         }
     }
 
 }
+
 // end product slider
 // start  advantages section
 
-.advantages{
-    background-color: $dark ;
+.advantages {
+    background-color: $dark;
     padding: 110px 0;
 
 
     &__title {
         color: #fff;
     }
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
     }
-    &__item{
+
+    &__item {
         max-width: 370px;
         text-align: center;
         padding: 0 15px;
+
         &:hover {
-            .advantages__item-images  {
+            .advantages__item-images {
                 background-color: $green;
             }
+
             .advantages__item-title {
                 color: $green;
             }
+
             .advantages__item-images {
                 svg {
                     fill: #fff;
                 }
             }
-           
+
 
         }
-       
+
         &-images {
             width: 114px;
             height: 114px;
@@ -364,26 +385,31 @@
             margin: 0 auto 30px;
             transition: all .5s;
         }
-        &-title{
+
+        &-title {
             @include f500;
             color: #fff;
             margin-bottom: 25px;
             font-size: 24px;
             transition: all .5s;
         }
-        &-text{
+
+        &-text {
             font-size: 15px;
         }
 
     }
 
 }
+
 .icons-1 svg {
     width: 60px;
 }
+
 .icons-2 svg {
     width: 65px;
 }
+
 .icons-3 svg {
     width: 67px;
 }
@@ -394,43 +420,81 @@
 
 .author {
 
- background-position: top;
- background-repeat: no-repeat;
- background-size: cover;
- min-height: 750px;
- display: flex;
- justify-content: center;
- align-items: center;
-     &__box {
-         max-width: 650px;
-         width: 100%;
-         min-height: 215px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         background-color: $green;
-     }
-     &__title {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+    }
+
+    &__title {
         margin-right: 45px;
         max-width: 260px;
         font-size: 30px;
         line-height: 30px;
         color: #fff;
-        span{
+
+        span {
             @include f700;
         }
-     }
+    }
 
-     &__link{
-       font-size: 18px;
-       line-height: 36px;
+    &__link {
+        font-size: 18px;
+        line-height: 36px;
         background-color: #fff;
         padding: 14px 40px;
-     }
+    }
 
 }
 
+// end author section
+// start tutorial section
 
+.tutorial {
+    padding: 60px 0 120px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial__item {
+
+    &-images {
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 270px;
+
+    }
+
+    &-title{
+        font-size: 24px;
+        background-color: #f8f8f8 ;
+        text-align: center;
+        @include f700;
+        padding: 30px 10px;
+        color:$dark;
+    }
+}
 
 
 
