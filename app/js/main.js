@@ -7,7 +7,7 @@ $(".rate-star").rateYo({
         readOnly: true
         
       });
- var mixer =  mixitup('.products__inner-box')
+ 
    
       $('.product-slider__inner').slick({
         infinite: true,
@@ -17,6 +17,16 @@ $(".rate-star").rateYo({
         arrows:false
 
         
+      });
+
+
+
+      $('.menu__btn ').on('click' , function(){
+        $('.menu__list').slideToggle()
+      });
+
+      $('.header__btn-menu').on('click' , function(){
+        $('.header__box').toggleClass('active')
       });
   
     });

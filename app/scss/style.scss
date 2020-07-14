@@ -3,7 +3,11 @@
 @import "vars";
 
 
+
 // start header 
+.header {
+    background-color: #fff;
+}
 
 .header__top-inner {
     display: flex;
@@ -122,7 +126,7 @@
     }
 }
 .basket {
-    
+    margin-right: 20px;
     span {
 background-color: $green;
     }
@@ -138,7 +142,7 @@ background-color: $green;
 }
 
 .user {
-    margin-left: 20px;
+   
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -233,6 +237,7 @@ background-color: $green;
     height: 0;
     overflow: hidden;
    transition: all .3s;
+   z-index: 1;
 
  }
 
@@ -355,7 +360,10 @@ background-color: $green;
     color: $tomato;
 }
 
-
+.header__btn-menu,
+.menu__btn{
+    display: none;
+}
 
 
 // end header 
@@ -1397,6 +1405,14 @@ button.icon-unsorted{
 
 
 // end  product-page
+
+
+
+
+
+
+
+@import 'media';
 
 
   
