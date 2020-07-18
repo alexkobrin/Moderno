@@ -2326,12 +2326,162 @@ min-height: 100%;
         
     }
 }
-
-
-
-
-
 // end  profil  
+// start  upload  
+.upload__inner {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+    button {
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+    }
+}
+.upload__inner-title {
+    font-size: 24px;
+    @include f500;
+    padding: 16px 35px 18px;
+    color: $dark;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+}
+.upload__inner-content {
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+
+}
+.upload-line {
+    margin-bottom: 25px;
+    display: flex;
+    
+    label{
+        min-width: 175px;
+         padding-top: 5px;
+        padding-right: 15px;
+        color: #444;
+        span{
+            color: $green;
+        }
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    select,
+    input,
+    textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+
+    }
+   .jq-selectbox   {
+       width: 100%;
+   }
+   .jq-selectbox__select {
+      
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-bottom-color: #B3B3B3;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow:none;
+    font-family: 'Roboto' , 'sans-serif';
+    line-height: 40px;
+    color: #707070;
+    text-shadow:none;
+}
+input[type="file"] {
+    outline: none;
+}
+.jq-selectbox__trigger-arrow {
+    border: none;
+    transform: rotate(-90deg);
+    position: relative;
+    &::before {
+        content: "\f053";
+       position: absolute;
+        font-family: 'icomoon';
+        left: -9px;
+        top: 9px;
+        font-size: 12px;
+         
+        
+    }
+}
+.jq-selectbox__trigger {
+   
+    border-left: 0px solid #CCC;
+}
+}
+ 
+.jq-selectbox__dropdown {
+    height: auto;
+    top: 40px;
+    bottom: auto; 
+    display: none;
+}
+
+.jq-file {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+}
+.jq-file__name {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 18px;
+    margin-left: 100px;
+    border: none;
+    border-bottom-color: transparent;
+    border-bottom-color: #B3B3B3;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+    
+}
+
+.jq-file__browse {
+    top: 5px;
+    left: 10px;
+    right: auto;
+    padding: 0 12px;
+    border-left: 1px solid #d7d7d7;
+    border: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 12px;
+    line-height: 26px;
+    color: #444;
+}
+
+
+
+// end  upload  
 
 
 
