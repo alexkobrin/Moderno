@@ -92,6 +92,8 @@ body {
 
     &__inner{
         padding: 45px 0 40px;
+        overflow: hidden;
+        width: 120px;
     }
     &__list {
         li{
@@ -130,6 +132,10 @@ body {
         left: 0;
     }
 }
+ #modal {
+     display: none;
+
+ }
 
 
  

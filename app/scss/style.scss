@@ -446,18 +446,8 @@ background-color: $green;
  .fancybox-button svg path {
     fill: #fff;
     
-}
-  
-
-
-
+} 
 // end modal
-
-
-
-
-
-
 // end header 
 // start search 
 
@@ -542,8 +532,14 @@ background-color: $green;
 .products {
     padding: 110px 0;
     background-color: $grey;
-
 }
+.products__wrapper,
+.product-slider__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+
 .products__inner-btn {
     text-align: center;
     margin-bottom: 60px;
@@ -567,9 +563,17 @@ background-color: $green;
 }
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
+.products .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
+}
+ 
+
+
 .product__item {
     max-width: 442px;
     width: 100%;
@@ -855,15 +859,12 @@ background-color: $green;
 }
 
 .tutorial__item {
-
     &-images {
-
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 270px;
     }
-
     &-title {
         font-size: 24px;
         background-color: #f8f8f8;
@@ -939,7 +940,6 @@ background-color: $green;
 
     }
 }
-
 .footer__info-phone {
     &::before {
         content: '\f095';
@@ -1301,11 +1301,11 @@ button.icon-unsorted{
     }
 }
 .product-page__content{
-
     .product__item {
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px) ;
         background-color: #fff;
         transition: all .5s;
+        margin-left: 30px;
 
     }
     .product__item-img {
@@ -1332,17 +1332,15 @@ button.icon-unsorted{
 }
 .product-page__items{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: -30px;
 }
 .pagination {
 
     .pagination__list{
-        li {
-         
-            
-           
+        li { 
             display: inline-block;
             & + li {
                 margin-left: 6px;
@@ -1413,6 +1411,7 @@ button.icon-unsorted{
 .product__item {
     &.list {
         max-width: 100%;
+        flex-basis: 100%;
     .product__item-img {
         width: 240px;
         float: left;
@@ -1470,7 +1469,7 @@ button.icon-unsorted{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
     margin-bottom: 30px;
 }
 
@@ -1660,6 +1659,51 @@ button.icon-unsorted{
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    .jq-selectbox__select {
+        width: 96px;
+        height: 28px;
+        padding: 5px 20px 4px 10px;
+        border: 1px solid #d3d3d3;
+        border-bottom-color: #B3B3B3;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        font: 13px/14px Arial,sans-serif;
+        color: #333;
+        text-shadow: 1px 1px #FFF;
+        text-transform: capitalize;
+        
+    }
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-top: 0px solid $green;
+        border-right: 0px solid $green;
+        border-left: 0px solid $green;
+        &::before {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+        font-family: 'icomoon';
+        content: "\f107";
+        font-size: 15px;
+        color: $green;
+          }
+        
+    }
+
+
+    .jq-selectbox__trigger {
+        
+        border-left: 0px solid #CCC;
+    }
+    .jq-selectbox__select-text {
+        width: 48px;
+    }
+
 }
 .price__product{
     font-size: 22px;
@@ -2103,7 +2147,8 @@ min-height: 100%;
     align-items: center;
      
     label{
-        width: 260px;
+        max-width: 260px;
+        width: 100%;
         color: #444444;
     }
     input  {
@@ -2126,6 +2171,67 @@ min-height: 100%;
 
     }
 }
+.settings__line {
+    select{
+        
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 10px;
+        &::placeholder {
+            color: #707070;
+        }  
+    }
+       .jq-selectbox   {
+       width: 100%;
+   }
+   .jq-selectbox__select {
+    width: 100%;
+    max-width: 540px;
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-bottom-color: #B3B3B3;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow:none;
+    font-family: 'Roboto' , 'sans-serif';
+    line-height: 40px;
+    color: #707070;
+    text-shadow:none;
+}
+input[type="file"] {
+    outline: none;
+}
+.jq-selectbox__trigger-arrow {
+    border: none;
+    transform: rotate(-90deg);
+    position: relative;
+    &::before {
+        content: "\f053";
+       position: absolute;
+        font-family: 'icomoon';
+        left: -9px;
+        top: 9px;
+        font-size: 12px;
+         
+        
+    }
+}
+.jq-selectbox__trigger {
+    border-left: 0px solid #CCC;
+}
+}
+ 
+.jq-selectbox__dropdown {
+    height: auto;
+    top: 40px;
+    bottom: auto; 
+    display: none;
+}
+
 
 // end  settings
 // start  profil  

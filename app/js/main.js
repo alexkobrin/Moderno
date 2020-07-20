@@ -14,7 +14,36 @@ $(".rate-star").rateYo({
         slidesToShow: 4,
         slidesToScroll: 4,
         dots: true,
-        arrows:false
+        arrows:false,
+        responsive:[
+          {
+            breakpoint:1900,
+              settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinity:true,
+            }
+
+          },
+          {
+            breakpoint:1441,
+              settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+               
+            }
+          },
+          {
+            breakpoint:800,
+              settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+              autoplay: true
+            }
+
+          }
+        ]
 
         
       });
@@ -33,14 +62,6 @@ $(".rate-star").rateYo({
           $('#'+id).addClass('active-tab').fadeIn();
           return false;
         });
-
-
-
-
-
-
-
-
 
 
       $('.menu__btn ').on('click' , function(){
@@ -74,6 +95,8 @@ $('.icon-th-large').on('click', function(){
       to: 600,
       prefix: "$"
     });
+
+    var mixer = mixitup ('.products__inner-box');
   
     
    
