@@ -1,3 +1,5 @@
+@import "vars";
+
 html {
     box-sizing: border-box;
 }
@@ -7,11 +9,134 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+html,
+body {
+    height: 100%;
+    
+}
+
+
  a {
      display: inline-block;
+     text-decoration: none;
+     color: $color-text;
  }
+
  ul,li{
      margin: 0;
      padding: 0;
      list-style: none;
+     
  }
+
+ body{
+    font-family: 'Roboto' , 'sans-serif';
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $color-text;
+    overflow-x: hidden ;
+ }
+
+ 
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+
+ .container {
+     max-width: 1200px;
+     padding: 0 15px;
+     margin: 0 auto;
+    
+ }
+
+ .container-fluid {
+    max-width: 100%;
+    padding: 0 30px;
+    margin: 0 auto; 
+}
+@media (max-width: 720px) {
+
+    .container-fluid {  
+        padding: 0 15px;
+    }
+    
+   
+}
+.page-content {
+    background-color: #f4f6f5;
+}
+
+
+.title  {
+    text-align: center;
+    margin-bottom: 30px;
+    color: $dark;
+    @include f700;
+    font-size: 36px;
+    line-height: 60px;
+}
+
+.breadcrumbs{
+
+    &__inner{
+        padding: 45px 0 40px;
+        overflow: hidden;
+        width: 120px;
+    }
+    &__list {
+        li{
+            display: inline-block;
+            position: relative;
+            
+            & + li{
+                padding-left: 24px;
+                &::before{
+                    content: '-';
+                    position: absolute;
+                    color: $green;
+                    left: 8px;
+                }
+            }
+            &:last-child {
+                a , span {
+                    color: $dark;
+                }
+            }
+        }
+        a{
+            color: #b0bec5;
+        }
+    }
+}
+.angle-right{
+    position: relative;
+    padding-left: 15px;
+    &::before {
+        position: absolute;
+        content: "\f105";
+        font-family: 'icomoon';
+        color: $green;
+        font-size: 14px;
+        left: 0;
+    }
+}
+ #modal {
+     display: none;
+
+ }
+
+
+ 
+  
